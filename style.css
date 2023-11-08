@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond&family=Libre+Baskerville:wght@400;700&family=Lora:ital@1&family=Merriweather:ital,wght@1,900&family=Playfair+Display:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,rgb(7, 26, 84),rgb(33, 32, 32),rgb(73, 41, 133));
+}
+.todo{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 100vh;
+    background: rgb(249, 240, 240);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.todo1{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 50px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: center;
+    
+}
+.todo1 h1{
+    text-decoration: underline;
+    margin-top: 5px;
+}
+/* .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.search{
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 50px;
+    /* border-top-right-radius: 12px;
+    border-top-left-radius: 12px; */
+    display: flex;
+    /* background: black; */
+    color: black;
+    justify-content: center;
+}
+.search input{
+    width: 100%;
+    max-width: 270px;
+    margin-top: 15px;
+    border-radius: 100px;
+    border: 1.5px solid black;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    background: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.search button{
+    width: 100%;
+    max-width: 50px;
+    margin-top: 15px;
+    margin-left: 8px;
+    border-radius: 100px;
+    border: 1.5px solid black;
+    background: rgb(61, 174, 108);
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    /* font-weight: 600; */
+}
+ul li{
+    list-style: none;
+    font-size: 19px;
+    padding: 17px 45px;   
+    position: relative;
+    cursor: pointer;
+
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
+    background-image: url(images/uc.png);
+    background-size: cover;
+    background-position: center;
+    top: 17px;
+    left: 13px;
+
+}
+ul li.checked{
+    color: black;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/cc4.png);
+}
+ul li span{
+    position: absolute;
+    right: 9px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+}
+ul li span:hover{
+    cursor: pointer;
+    background: #5b6b70;
+}
